@@ -7,4 +7,4 @@ def uppercase(str):
         else:
             strupp += i
 
-    print(strupp)
+    print("{}".format(strupp))
