@@ -6,9 +6,8 @@ def roman_to_int(roman_string):
     if not isinstance(roman_string, str):
         return 0
 
-    roman_lit = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100,
-                 "D": 500, "M": 1000}
-    num_ls = [roman_lit[i] for i in roman_string]
+    roman_n = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+    num_ls = [roman_n[i] for i in roman_string]
     if len(num_ls) == 1:
         return num_ls[0]
     num = 0
