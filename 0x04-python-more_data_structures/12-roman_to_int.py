@@ -16,9 +16,9 @@ def roman_to_int(roman_string):
             num += num_ls[x]
         else:
             num -= num_ls[x]
-    if num_ls[-1] >= num_ls[-2]:
+    if num_ls[-2] >= num_ls[-1] or num_ls[-1] > 1:
         num += num_ls[-1]
     else:
         num -= num_ls[-1]
 
-    return num
+    return num if num > 0 else -num
