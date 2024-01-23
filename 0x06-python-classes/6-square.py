@@ -27,7 +27,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        """sets the square position to the given value"""
+
         if (not isinstance(value, tuple) or
                 not all(isinstance(x, int) for x in value) or
                 len(value) != 2 or
@@ -39,7 +39,6 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Sets the square size with a new one"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
