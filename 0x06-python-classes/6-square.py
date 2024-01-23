@@ -1,27 +1,28 @@
 #!/usr/bin/python3
-"""Class square is defined"""
+"""Class square is defined."""
 
 
 class Square:
-    """this is a square"""
+    """this is a square."""
+
     def __init__(self, size=0, position=(0, 0)):
-        """new square initialization
+        """Initialize a new square.
 
         Args:
                 size (int): size of the new square
-                position (tuple): position of square
+                position (tuple): position of square.
         """
         self.size = size
         self.position = position
 
     @property
     def size(self):
-        """Sets/gets the current size of square"""
+        """Sets/gets the current size of square."""
         return (self.__size)
 
     @property
     def position(self):
-        """Set/get teh current position of square"""
+        """Set/get teh current position of square."""
         return (self.__position)
 
     @position.setter
@@ -43,14 +44,13 @@ class Square:
         self.__size = value
 
     def area(self):
-        """Returns area of the square"""
+        """Return area of the square."""
         return (self.__size ** 2)
 
     def my_print(self):
-        """prints the square using # """
+        """Print the square using #."""
         if self.__size == 0:
             print()
-            return
 
         for i in range(self.__size):
             print(" " * self.__position[0], end="")
