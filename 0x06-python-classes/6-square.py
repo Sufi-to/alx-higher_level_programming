@@ -51,6 +51,7 @@ class Square:
         """Print the square using #."""
         if self.__size == 0:
             print()
+            return
 
         for i in range(0, self.__position[1]):
             print()
