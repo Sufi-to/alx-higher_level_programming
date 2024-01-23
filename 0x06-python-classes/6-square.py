@@ -50,6 +50,7 @@ class Square:
         """prints the square using # """
         if self.__size == 0:
             print()
+            return
 
         for i in range(self.__size):
             print(" " * self.__position[0], end="")
