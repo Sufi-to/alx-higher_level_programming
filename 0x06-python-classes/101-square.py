@@ -54,8 +54,20 @@ class Square:
             return
 
         for i in range(0, self.__position[1]):
-            print(" ")
+            print()
 
         for i in range(self.__size):
             print(" " * self.__position[0], end="")
             print("#" * self.__size)
+    def __str__(self):
+        """Print a human readable representation of a square."""
+        if self.__size != 0:
+            for i in range(0, self.__position[1]):
+                print("")
+
+        for i in range(self.__size):
+            print(" " * self.__position[0], end="")
+            print("#" * self.__size, end="")
+            if i != self.__size - 1:
+                print("")
+        return ("")
