@@ -8,14 +8,15 @@ class Rectangle:
     number_of_instances = 0
     print_symbol = "#"
 
-
     def __init__(self, width=0, height=0):
+        """Initialize the rectangle object using width and height."""
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
 
     @property
     def width(self):
+        """Gets the width of the rectangle."""
         return (self.__width)
 
     @width.setter
@@ -29,6 +30,7 @@ class Rectangle:
 
     @property
     def height(self):
+        """Gets the height of the rectangle."""
         return (self.__height)
 
     @height.setter
@@ -49,6 +51,7 @@ class Rectangle:
         return (2 * (self.__width + self.__height))
 
     def __str__(self):
+        """Return string represenation of the instance."""
         if self.__width == 0 or self.__height == 0:
             return ""
         else:
@@ -60,8 +63,10 @@ class Rectangle:
             return x
 
     def __repr__(self):
+        """Return a string that can create an instance using "eval()"."""
         return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
+        """Print message when a deleted object is called."""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
