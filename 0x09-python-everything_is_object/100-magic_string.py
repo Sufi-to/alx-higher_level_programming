@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 def magic_string():
-    global i; i += 1
-    return ("BestSchool, " * i)[:-2]
+    global i
+    return ("BestSchool, " * (i := i + 1))[:-2]
