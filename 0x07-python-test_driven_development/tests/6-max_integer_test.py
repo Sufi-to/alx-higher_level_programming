@@ -33,7 +33,7 @@ class TestMaxInteger(unittest.TestCase):
         my_list = [1, 3, 5, 7]
         self.assertEqual(max_integer(my_list), 7)
 
-    def text_max_integer(self):
+    def test_max_integer(self):
         """Check max at the beginning."""
         my_list = [19, 12, 1, 5]
         self.assertEqual(max_integer(my_list), 19)
