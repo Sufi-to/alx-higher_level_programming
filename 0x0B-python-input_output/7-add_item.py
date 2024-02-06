@@ -13,6 +13,6 @@ if Path(filename).exists():
     data_from_json_file = load_from_json_file(filename)
 else:
     data_from_json_file = []
-    for i in range(1, len(argv)):
-        data_from_json_file.append(argv[i])
+for i in range(1, len(argv)):
+    data_from_json_file.append(argv[i])
 save_to_json_file(data_from_json_file, filename)
