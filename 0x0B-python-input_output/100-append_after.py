@@ -2,8 +2,7 @@
 """Contains the append_after function."""
 
 
-def append_after(filename="", search_string="",
-                 new_string=""):
+def append_after(filename="", search_string="", new_string=""):
     """Insert a line of text to a file after a particular string."""
     read_file = []
     with open(filename, 'r', encoding="utf-8") as file:

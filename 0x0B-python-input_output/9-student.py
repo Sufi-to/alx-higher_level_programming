@@ -13,4 +13,4 @@ class Student:
 
     def to_json(self):
         """Retrieve the dict represenation of Student instance."""
-        return self.__dict__.copy()
+        return self.__dict__
