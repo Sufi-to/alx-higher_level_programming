@@ -6,19 +6,8 @@ from sys import argv
 import json
 from pathlib import Path
 
-
-def load_from_json_file(filename):
-    """Create a python object from a json file."""
-    with open(filename, "r", encoding="utf-8") as file:
-        line = file.readline().strip()
-        return json.loads(line)
-
-
-def save_to_json_file(my_obj, filename):
-    """Save a json object to a file."""
-    x = json.dumps(my_obj)
-    with open(filename, "w", encoding="utf-8") as file:
-        file.write(x)
+save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
+load_from_json_file = __import__('6-load_from_json_file').load_from_json_file
 
 
 if __name__ == "__main__":
