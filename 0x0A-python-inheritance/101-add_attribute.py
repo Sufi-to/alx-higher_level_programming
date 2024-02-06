@@ -8,5 +8,3 @@ def add_attribute(obj, att_name, att_value):
         raise TypeError('can\'t add new attribute')
     if (not hasattr(obj, att_name)):
        obj.__setattr__(att_name, att_value)
-
-
