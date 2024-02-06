@@ -7,9 +7,9 @@ def append_after(filename="", search_string="",
     """Insert a line of text to a file after a particular string."""
     read_file = []
     with open(filename, 'r', encoding="utf-8") as file:
-        for l in file:
+        for line in file:
             read_file += [l]
-            if l.find(search_string) != -1:
+            if line.find(search_string) != -1:
                 read_file += [new_string]
 
     with open(filename, 'w', encoding='utf-8') as file:
