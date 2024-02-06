@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""Module for add_attribute."""
+
+
 def add_attribute(obj, att_name, att_value):
-    if att_name in obj.__dict__.keys():
+    """Adds an attribute to a class."""
+    if not hasattr(obj, "__dict__"):
         raise TypeError('can\'t add new attribute')
-    else:
-       obj.att_name = att_value
+    if (not hasattr(obj, att_name)):
+       obj.__setattr__(att_name, att_value)
 
 
