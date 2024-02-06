@@ -17,4 +17,4 @@ else:
     data_from_json_file = []
     for i in range(1, len(argv)):
         data_from_json_file.append(argv[i])
-    save_to_json_file(data_from_json_file, filename)
+save_to_json_file(data_from_json_file, filename)
