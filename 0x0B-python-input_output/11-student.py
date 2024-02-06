@@ -14,7 +14,7 @@ class Student:
     def to_json(self, attrs=None):
         """Retrieve the dict represenation of Student instance."""
         if attrs is None:
-            json_obj = self.__dict__
+            json_obj = self.__dict__.copy()
             return json_obj
         else:
             new_obj = {}
