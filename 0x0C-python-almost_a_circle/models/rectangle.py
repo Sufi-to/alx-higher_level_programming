@@ -43,7 +43,6 @@ class Rectangle(Base):
 
         self.__height = value
 
-
     @property
     def x(self):
         return self.__x
@@ -76,15 +75,16 @@ class Rectangle(Base):
 
     def display(self):
         """Print the rectangle using #."""
-        for col in range (self.__y):
+        for col in range(self.__y):
             print()
         for i in range(self.__height):
-            print(" " * self.__x +'#' * self.__width, end='')
+            print(" " * self.__x + '#' * self.__width, end='')
             print()
 
     def __str__(self):
         """Return string representation of the class."""
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -
+                {self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
         """Update the attributes of the rectangle instance."""
@@ -104,4 +104,5 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Return a dictionary representation of a Rectangle."""
-        return {'x':self.__x, 'y':self.__y, 'id':self.id, 'height':self.__height, 'width':self.__width}
+        return ({'x': self.__x, 'y': self.__y, 'id': self.id,
+                 'height': self.__height, 'width': self.__width})
