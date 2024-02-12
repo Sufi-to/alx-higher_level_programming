@@ -83,7 +83,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return string representation of the class."""
-        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}")
+        return (f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - "
+                f"{self.__width}/{self.__height}")
 
     def update(self, *args, **kwargs):
         """Update the attributes of the rectangle instance."""
