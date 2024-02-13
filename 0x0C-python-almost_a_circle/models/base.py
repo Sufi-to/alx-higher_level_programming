@@ -82,7 +82,6 @@ class Base:
                 draw.fd(r.height)
                 draw.lt(90)
 
-
         for s in list_squares:
             draw.penup()
             draw.goto(s.x, s.y)
