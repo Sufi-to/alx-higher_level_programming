@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains the base class."""
 import json
+import turtle
 
 
 class Base:
@@ -61,3 +62,35 @@ class Base:
                 return [cls.create(**i) for i in dict_list]
         except IOError:
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Open the window and draw all the rectangles and Squares."""
+        turtle.title("0x0C-python_almost_full_circle draw function")
+        turtle.bgcolor("cyan")
+        draw = turtle.Turtle()
+        draw.shape("turtle")
+        draw.shapesize(1, 1, 1)
+        draw.pen(pencolor="purple", fillcolor="orange", pensize=3, speed=1)
+        for r in list_rectangles:
+            draw.penup()
+            draw.goto(r.x, r.y)
+            draw.pendown()
+            for i in range(2):
+                draw.fd(r.width)
+                draw.lt(90)
+                draw.fd(r.height)
+                draw.lt(90)
+
+
+        for s in list_squares:
+            draw.penup()
+            draw.goto(s.x, s.y)
+            draw.pendown()
+            for i in range(2):
+                draw.fd(s.width)
+                draw.lt(90)
+                draw.fd(s.height)
+                draw.lt(90)
+
+        turtle.exitonclick()
