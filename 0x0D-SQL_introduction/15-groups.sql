@@ -2,5 +2,5 @@
 -- in the table second_table or the database
 SELECT score, COUNT(*) AS number
 FROM second_table
-GROUP BY number
+GROUP BY score
 ORDER BY number DESC;
