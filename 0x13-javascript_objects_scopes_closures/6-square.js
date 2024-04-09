@@ -1,5 +1,7 @@
 #!/usr/bin/node
-class Square extends Square {
+const Squaref = require('./5-square');
+
+class Square extends Squaref {
     charPrint(c) {
         let char;
         if (c === undefined) {
