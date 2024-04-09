@@ -5,4 +5,3 @@ logMe = function (item) {
 	console.log(nbargs + ': ' + item);
 	nbargs++;
 }
-
