@@ -2,7 +2,7 @@
 """Contains the base class."""
 import json
 import turtle
-
+import csv
 
 class Base:
     """This is the Base class."""
@@ -60,6 +60,44 @@ class Base:
             with open(filename, 'r') as file:
                 dict_list = Base.from_json_string(file.read())
                 return [cls.create(**i) for i in dict_list]
+        except IOError:
+            return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Save objects to a csv file."""
+        csv_file_name = cls.__name__ + ".csv"
+        with open(csv_file_name, 'w', newline='') as file:
+            csv_writer = csv.writer(file)
+            if list_objs is None:
+                csv_writer.write("[]")
+            else:
+                if cls.__name__ == "Square":
+                    csv_writer.writerow("id", "size", "x", "y")
+                    for square in list_objs:
+                        csv_writer.writerow(square.id, square.size, square.x, square.y)
+                if cls.__name__ == "Rectangle":
+                    csv_writer.writerow("id", "width", "height", "x", "y")
+                    for rect in list_objs:
+                        csv_writer.writerow(rect.id, rect.width, rect.height, rect.x, rect.y)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Returns objects from a csv file or empty list if not found."""
+        csv_name = str(cls.__name__) + ".csv"
+        try:
+            with open(csv_name, 'r') as file:
+                if cls.__name__ == "Rectangle":
+                    f_names = ["id", "width", "height", "x", "y"]
+                else:
+                    f_names = ["id", "size", "x", "y"]
+                reader = csv.DictReader(file, field_names=f_names)
+                objs = []
+                for row in reader:
+                    x = row.to_dictionary()
+                    objs.append(x)
+                return 
+
         except IOError:
             return []
 
