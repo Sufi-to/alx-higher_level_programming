@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
 Contains a state class that inherits from Base class that is an
-intance of declarative base
+intance of declarative base and a relationship with the cities table
 """
 from sqlalchemy import Column, Integer, String, MetaData
 from sqlalchemy.ext.declarative import declarative_base
