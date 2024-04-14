@@ -1,4 +1,4 @@
-#!/usr/bin/python6
+#!/usr/bin/python3
 """ gets all the states from the given database """
 import MySQLdb
 import sys
