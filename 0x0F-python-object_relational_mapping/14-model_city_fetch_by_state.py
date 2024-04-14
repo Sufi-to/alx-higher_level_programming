@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-deletes all the rows from the database that contain a in their names
+displays all the city objects from the database
 """
 import sys
 from model_state import Base, State

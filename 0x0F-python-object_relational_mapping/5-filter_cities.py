@@ -10,7 +10,7 @@ if __name__ == "__main__":
     cur = conn.cursor()
     no_funny_bidnes = sys.argv[4]
     cur.execute("""SELECT cities.name * FROM
-                 cities INNER JOIN states ON states.id=cities.id
+                 cities INNER JOIN states ON states.id=cities.states_id
                  WHERE states.name=%s""", (no_funny_bidnes, ))
     query_rows = cur.fetchall()
     list_cities = list(row[0] for row in query_rows)
