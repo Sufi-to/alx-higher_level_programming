@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-displays all the city objects from the database
+adds a state with a city name using the relationship in sqlalchemy
 """
 import sys
 from relationship_state import Base, State

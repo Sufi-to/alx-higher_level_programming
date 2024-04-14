@@ -4,7 +4,8 @@ Contains a state class that inherits from Base class that is an
 intance of declarative base
 """
 from sqlalchemy import Column, Integer, String, MetaData
-from sqlalchemy.ext.declarative import declarative_base, relationship
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import relationship
 
 
 this_metadata = MetaData()
