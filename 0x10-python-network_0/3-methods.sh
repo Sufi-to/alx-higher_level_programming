@@ -1,3 +1,9 @@
 #!/bin/bash
 # script that takes all HTTP methods the server will accept
-curl -s -X OPTIONS -I "$1"
+response=$(curl -s -X OPTIONS -i "$1")
+allow_opts=$(echo "$response" | grep -i "Allow")
+if [ -n "$allow_opts" ];
+then
+	methods=$(echo "$allow_opts" | awk '{print substr($0, 8)}')
+	echo "$methods"
+fi
